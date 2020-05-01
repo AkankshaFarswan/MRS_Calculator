@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<HTML>
+    <HEAD>
+        <SCRIPT>
+            function Find(){
+                var a=parseInt(document.getElementById("txta").value);
+                var b=parseFloat(document.getElementById("txtb").value);
+                var c=parseFloat(document.getElementById("txtc").value);
+                var d=parseFloat(document.getElementById("txtd").value);
+                var e=parseFloat(document.getElementById("txte").value);
+                var f=parseFloat(document.getElementById("txtf").value); 
+				
+                var l=0; 
+                var ri="";				
+              
+                if (c <= 4.775004){
+         			if (e <= 3.4){
+                        if (b <= 2.890002){
+                            if (f <= 12.300002){
+                                l=2;
+                            } 
+                            else{
+                                l=1;
+                            } 
+                        }				
+                        else{
+                            if(a <= 65){
+                                if (d <= 10.665854){
+                                    l=1;
+                                }
+                                else{
+                                    if (f <= 11.900003){
+                                        l=2;
+                                    }
+                                    else {
+                                        l=1;
+                                    }
+								}
+							}	
+                            else{
+                                if (f <= 11.699998){
+                                    l=2;
+                                }
+                                else {
+                                    l=1;
+                                }
+							}
+                        }
+                    }						
+                    else{
+                        l=2;
+                        }
+				}		    
+                else{
+                    if (f <= 11.899999){
+                        if (d <= 10.6){
+                            if(e <= 3.52){
+                                if (a <= 67){
+                                    l=2;
+                                }
+                                else{
+                                    if (b <= 3){
+                                        l=3;
+                                        }
+                                    else{
+                                        l=2;
+                                    }
+								}	
+							}	
+                            else{
+                                l=3;
+                            }
+						}	
+                        else{
+                            l=3;
+						}
+					}	
+                    else{
+                        if(a <= 65){
+                            if(d <= 10.599998){
+                                if (b <= 2.800001){
+                                    l=2;
+                                }
+                                else {
+                                    l=1;
+                                } 
+							}	
+                            else{
+                                l=2;
+                            }
+						}	
+                        else{
+                            l=2;
+                        }
+					}	
+				}
+				document.getElementById("txtl").value=""+l;  
+				if (l==1){
+					ri = "Low Risk"
+				}
+				if (l==2){
+				    ri = "Intermediate Risk"
+				}
+				if (l==3){
+				    ri = "High Risk"
+				}
+				document.getElementById("txtg").value=""+ri;
+				addTheImage();
+            }
+			function addTheImage() {
+			    var intg = parseInt(document.getElementById("txtl").value); 
+			    if (intg == 1){
+                    var img1 = document.getElementById("ID1");
+					//img1.src = "OS_MRS1.png"
+                    img1.src = "https://drive.google.com/uc?export=view&id=1N25qXcoFgoFklSYN4GcHIEnM4dbwX3NP";
+					img1.style.display = 'inline';
+					//img1.id= "imageId1";
+					//img1.width = 640;
+					//img1.height = 480;
+                    //document.body.appendChild(img1);					
+					var img2 = document.getElementById("ID2");
+					//img2.src = "PFS_MRS1.png"
+                    img2.src = "https://drive.google.com/uc?export=view&id=1gq17QHt05RHU13ULpMsbVl___l4EqAhc";
+					img2.style.display = 'inline';
+					//img2.width = 640;
+					//img2.height = 480;
+					//img2.id = "imageId2";					
+                    //document.body.appendChild(img2);	                 				
+                }    
+				if (intg ==2){
+				    var img1 = document.getElementById("ID1");
+                    img1.src = "https://drive.google.com/uc?export=view&id=1asnho6CGDrF4q0sVRdfysv8CxgbMsDfY";
+					//img1.src = "https://drive.google.com/thumbnail?id=1xjjWFVW2qlQF3lBJBLn9cQwg6pMPZVOY";
+					//img1.src = "OS_MRS2.png"
+					img1.style.display = 'inline';
+					//img1.width = 640;
+					//img1.height = 480;
+					//img1.id = "imageId1";
+                    //document.body.appendChild(img1);					
+					var img2 = document.getElementById("ID2");					
+                    img2.src = "https://drive.google.com/uc?export=view&id=1VbhoFJXprImY70u4nqUSqTY6pFc3_cml";
+					//img2.src = "https://drive.google.com/thumbnail?id=1xjjWFVW2qlQF3lBJBLn9cQwg6pMPZVOY";
+					//img2.src = "PFS_MRS2.png"
+					img2.style.display = 'inline';
+					//img2.width = 640;
+					//img2.height = 480;
+					//img2.id = "imageId2";
+                    //document.body.appendChild(img2);
+				}
+				if (intg ==3){
+				    var img1 = document.getElementById("ID1");
+                    img1.src = "https://drive.google.com/uc?export=view&id=1Ecdfyvz4eKiXFBWVPVhEZH03X7D3pBLB";
+					//img1.src = "OS_MRS3.png"
+					img1.style.display = 'inline';
+					//img1.width = 640;
+					//img1.height = 480;
+					//img1.id = "imageId1";
+                    //document.body.appendChild(img1);					
+					var img2 = document.getElementById("ID2");	
+                    //img2.src = "PFS_MRS3.png"					
+                    img2.src = "https://drive.google.com/uc?export=view&id=1oIlAN8KchFzHXtzAlfjdVHKV0v7Qt1cA";
+					img2.style.display = 'inline';
+					//img2.id = "imageId2";
+                    //document.body.appendChild(img2);					
+				}		
+            }
+			function reset(){
+			    document.getElementById("txta").value = "";
+			    document.getElementById("txtb").value = "";
+			    document.getElementById("txtc").value = "";
+			    document.getElementById("txtd").value = "";
+			    document.getElementById("txte").value = "";
+			    document.getElementById("txtf").value = "";
+                document.getElementById("txtl").value = "";	
+				document.getElementById("txtg").value = "";
+			    remove();		
+			}
+			function remove(){			    
+                var imrm1 = document.getElementById("ID1");
+				var imrm2 = document.getElementById("ID2");
+				imrm1.style.display = 'none';
+				imrm2.style.display = 'none';
+			}
+        </SCRIPT>
+		<style>
+		    input{
+			    text-align:center;
+			}
+		</style>
+    </HEAD>
+    <BODY>
+        <h2 style="text-align: center;"> Modified Risk Staging (MRS) calculator for Multiple Myeloma</h2>
+        <hr />
+        <table align="center">
+            <tr>
+                <td>
+                    <label>Age (years)</label>
+                </td>
+                <td>
+                    <input type="text" name="txta" id="txta" size="10"/>
+                </td>
+            </tr>
+	        <tr>
+                <td>
+                    <label>Albumin (g/L)</label>
+                </td>
+                <td>
+                    <input type="text" name="txtb" id="txtb" size="10"/>
+                </td>
+            </tr>
+    	    <tr>
+                <td>
+                    <label>B2M (mg/L)</label>
+                </td>
+                <td>
+                    <input type="text" name="txtc" id="txtc" size="10"/>
+                </td>
+            </tr>
+	        <tr>
+                <td>
+                    <label>Calcium</label>
+                </td>
+                <td>
+                    <input type="text" name="txtd" id="txtd" size="10"/>
+                </td>
+            </tr>	
+            <tr>
+                <td>
+                    <label>Creatinine (mg/dL)</label>
+                </td>
+                <td>
+                    <input type="text" name="txte" id="txte"  size="10"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Hemoglobin (g/dL)</label>
+                </td>
+                <td>
+                    <input type="text" name="txtf" id="txtf" size="10" />
+                </td>
+            </tr>
+            <tr>
+                <td><div align="right">
+                <input type="button" name="Submit2" value="Reset" onclick="reset()" />
+                </div></td>
+                <td><input type="button" value="Calculate" onclick="Find()" /></td>
+            </tr> 
+            <tr>
+                <td>
+                    <label>MRS stage</label>
+                </td>
+                <td>
+                    <input type="text" name="txtl" id="txtl" size="10" readonly />
+                </td>
+            </tr>		 
+	    </table>
+		<tr> <div align="center"> <input type="text" style="border:none; font-size: large;font-family: auto;font-weight: bold;" id="txtg" /> </tr>
+			<div id="image-table">
+                <table align="center">
+	                <tr>
+    	            <td style="padding:5px">        	             
+						 <img src="" id= "ID1" width="520" height="390" style="display:none">
+      	            </td>
+                    <td style="padding:5px">
+            	         <img src="" id ="ID2" width="520" height="390" style="display:none">
+                    </td>
+                    </tr>
+                </table>
+            </div>
+	</BODY>
+</HTML>
