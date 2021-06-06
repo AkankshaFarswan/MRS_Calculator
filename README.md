@@ -1,4 +1,4 @@
-# MRSStaging
+# MRS Staging Calculator
 A modified staging system for Multiple Myeloma.
 
 MRS is based on easy to acquire laboratory and clinical parameters, Age, albumin, B2M, Calcium, eGFR and Hemoglobin.
