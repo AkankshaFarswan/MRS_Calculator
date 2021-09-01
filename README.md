@@ -4,7 +4,9 @@ A modified staging system for Multiple Myeloma.
 MRS is based on easy to acquire laboratory and clinical parameters, Age, albumin, B2M, Calcium, eGFR and Hemoglobin.
 
 Download the html link and open in browser and run it by entering the parameters. It will assign a risk stage to the patient depending upon his parameters and also provide his OS and PFS.
+
 OR
+
 click the link below- 
 http://sbilab.iiitd.edu.in/pub_files/MRScalculator_DecisionTree.html
 
